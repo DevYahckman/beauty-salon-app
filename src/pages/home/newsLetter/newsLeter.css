@@ -1,0 +1,26 @@
+.newsLetter{
+    height: 70vh;
+    width: 100%;
+    background-image: url(./bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.head{
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
+}
+.para{
+    font-size: 20px;
+    color: rgb(24, 121, 121);
+}
+.sub{
+    margin-top: 5px;
+}

@@ -1,0 +1,66 @@
+.body{
+    margin-top: 10px;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../../assets/img/backn.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+   margin-bottom: 20px;
+    
+}
+.text{
+    text-align: center;
+    animation: animate ease 8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    margin-bottom: 7px;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.para1{
+    font-size: 30px;
+    font-family: 'Trebuchet MS', '
+    Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+}
+
+.para2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+    margin-bottom: 10px;
+
+}
+
+.buttonLand{
+    margin-top: 30px;
+    color:white;
+    border-color: white;
+    border-style: solid;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 30px;
+    padding: 10px;
+    letter-spacing: 25px;
+    border-radius: 50px;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+    border-radius: 1px solid black;  
+}
