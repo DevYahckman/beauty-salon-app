@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^13.2.1",
     "bootstrap": "^4.1.1",
     "bootstrap-social": "^5.1.1",
+    "joi": "13.4",
+    "joi-browser": "13.4",
     "mdb-react-ui-kit": "^4.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",

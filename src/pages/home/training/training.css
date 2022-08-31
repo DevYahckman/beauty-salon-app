@@ -1,0 +1,21 @@
+.training{
+    padding: 30px;
+    height: 100vh;
+    width: 100%;
+    background-color:#ebe9eb;;
+    
+}
+
+.secondTraining{
+    height: 80vh;
+    background-image: url("/public/images/traOne.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.firstTraining{
+    text-align: center;
+    padding-top: 100px;
+
+}

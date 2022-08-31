@@ -6,8 +6,8 @@ function Home(props) {
   return (
     <div>
       <LandingPage />
-      <NewsLetter />
       <Training />
+      <NewsLetter />
     </div>
   );
 }
