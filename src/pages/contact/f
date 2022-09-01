@@ -1,0 +1,52 @@
+import React, { Component } from "react";
+import "./contact.css";
+import Form from "../../components/sidebar/form";
+import Joi from "joi-browser";
+import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+
+class Contact extends Form {
+  state = {
+    data: { fullname: "", email: "", company: "", interest: "", message: "" },
+    error: {},
+  };
+
+  schema = {
+    fullname: Joi.string().required().label("Fullname"),
+
+    email: Joi.string().required().label("Email"),
+    company: Joi.string().required().label("Company"),
+    interest: Joi.string().required().label("Interest"),
+    message: Joi.string().required().label("Message"),
+  };
+
+  doSubmit = () => {
+    console.log("contacted");
+  };
+  render() {
+    return (
+      <div className=" contact">
+        <h1>bvgfvl</h1>
+        <div className="row">
+            <form onSubmit={this.handleSubmit}>
+          <div className="col-sm-4 contact1">
+
+
+              {this.renderInput("fullname", "fullname")}
+              {this.renderInput("email", "email")}
+              {this.renderInput("company", "Company")}
+              {this.renderInput("interest", "Interest")}
+
+              {this.renderButton("Send")}
+          </div>
+      </form>
+
+
+
+          <div className="col-sm-4 contact2">2</div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Contact;

@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import Joi from "joi-browser";
+import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 import Input from "./../input";
+import TextArea from "./textArea";
+import Select from './select';
 class Form extends Component {
   state = {
-    data: { username: "", password: "" },
+    data: {},
     errors: {},
   };
 
-  schema = {
-    username: Joi.string().required().label("Username"),
-    password: Joi.string().required().label("Password"),
-  };
   validate = () => {
     const options = { abortEarly: false };
     const { error } = Joi.validate(this.state.data, this.schema, options);
@@ -29,18 +28,18 @@ class Form extends Component {
     if (errors) return;
 
     // Do somehing
-    console.log("submitted");
+    this.doSubmit();
   };
 
-  
   handleChange = ({ currentTarget: input }) => {
     const errors = { ...this.state.errors };
     const errorMessage = this.validateProperty(input);
     if (errorMessage) errors[input] = errorMessage;
     else delete errors[input.name];
-    console.log(errors)
+
     const data = { ...this.state.data };
     data[input.name] = input.value;
+
     this.setState({ data, errors });
   };
 
@@ -52,29 +51,62 @@ class Form extends Component {
     return error ? error.details[0].message : null;
   };
 
-  render() {
-    const { errors, data } = this.state;
+  renderButton(label) {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <Input
-            onChange={this.handleChange}
-            error={errors.username}
-            name="username"
-            label="Username"
-            value={data.username}
-          />
-          <Input
-            onChange={this.handleChange}
-            error={errors.password}
-            value={data.password}
-            name="password"
-            label="Password"
-            type="password"
-          />
-          <button className="btn btn-primary">Submit</button>
-        </form>
-      </div>
+      <button className="btn btn-primary" disabled={this.validate()}>
+        {label}
+      </button>
+    );
+  }
+
+  renderInput(name, label, type = "text") {
+    const { data, errors } = this.state;
+    return (
+      <Input
+        onChange={this.handleChange}
+        error={errors[name]}
+        value={data[name]}
+        name={name}
+        label={label}
+        type={type}
+      />
+    );
+  }
+  renderTextArea(name, label) {
+    const { data, errors } = this.state;
+    return (
+      <TextArea
+        onChange={this.handleChange}
+        error={errors[name]}
+        value={data[name]}
+        name={name}
+        label={label}
+      />
+    );
+  }
+
+  renderSelect(name,label){
+    const { data, errors } = this.state;
+    return (
+      <Select
+        onChange={this.handleChange}
+        error={errors[name]}
+        value={data[name]}
+        name={name}
+        label={label}
+      />
+    );
+  }
+  renderLogo(icon) {
+    return (
+      <MDBBtn
+        className="m-1 btn"
+        floating
+        style={{ backgroundColor: "#dd4b39" }}
+        href="#"
+      >
+        <MDBIcon fab icon={icon} />
+      </MDBBtn>
     );
   }
 }

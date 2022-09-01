@@ -7,7 +7,8 @@ import About from "./pages/aboutus/about";
 import Academy from "./pages/academy/academy";
 import Home from "./pages/home/home";
 import Form from "./components/sidebar/form";
-
+import Test from "./components/sidebar/test";
+import Contact from "./pages/contact/contact";
 class App extends Component {
   state = {};
   render() {
@@ -17,13 +18,15 @@ class App extends Component {
 
         <Switch>
           <Route path="/Academy" component={Academy} />
+          <Route path="/contact" component={ Contact } />
           <Route path="/treatment" component={Treatment} />
           <Route path="/about" component={About} />
           <Route path="/" exact component={Home} />
         </Switch>
 
         <Footer />
-        <Form />
+
+      
       </div>
     );
   }
