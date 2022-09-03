@@ -1,0 +1,20 @@
+.bookM{
+    padding: 10px;
+   margin-left: 20%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    /* height: 90vh; */
+}
+.book{
+    height: 130vh;
+    padding: 10px;
+    width: 100%;
+    background-image: url('/public/images/bk1.jpg');
+    background-size: cover;
+    background-position: top;
+}
+.bookpara1{
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}

@@ -3,7 +3,7 @@ import Joi from "joi-browser";
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 import Input from "./../input";
 import TextArea from "./textArea";
-import Select from './select';
+import Select from "./select";
 class Form extends Component {
   state = {
     data: {},
@@ -27,6 +27,7 @@ class Form extends Component {
     this.setState({ errors: errors || {} });
     if (errors) return;
 
+   
     // Do somehing
     this.doSubmit();
   };
@@ -85,7 +86,7 @@ class Form extends Component {
     );
   }
 
-  renderSelect(name,label){
+  renderSelect(name, label) {
     const { data, errors } = this.state;
     return (
       <Select

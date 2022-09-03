@@ -2,18 +2,17 @@ import Form from "react-bootstrap/Form";
 
 function Select({ label, name, error, ...rest }) {
   return (
-    <Form.Select
-      {...rest}
-      name={name}
-      id={name}
-      aria-label="Default select example"
-    >
-      <option>{label}</option>
-      <option value="1">Braiding</option>
-      <option value="2">Twisting</option>
-      <option value="3">Aiming</option>
-      {error && <div className="alert alert-danger"> {error}</div>}
-    </Form.Select>
+    <div className="form-group">
+      <label htmlFor="">{label}</label>
+      <select {...rest} name={name} id={name} className="form-control">
+        <option>--Plese Choose The service you want--</option>
+        <option>Braiding</option>
+        <option>Make up </option>
+        <option>Hair care </option>
+        {/* https://restcountries.com/v3.1/all  */}
+      </select>
+      {error && <div className="alert alert-danger">{error}</div>}
+    </div>
   );
 }
 

@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
 import Joi from "joi-browser";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 import "./contact.css";
 import Form from "../../components/sidebar/form";
 
-
 class Login extends Form {
-  form = React.createRef()
+  form = React.createRef();
   state = {
-    data: { fullname: "", email: "",message:''  },
+    data: { fullname: "", email: "", message: "" },
     errors: {},
   };
 
@@ -28,11 +28,11 @@ class Login extends Form {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          toast.success("Email sent");
         },
         (error) => {
           console.log(error.text);
-          console.log('there is n error');
+          toast.error("there is n error");
         }
       );
     console.log("tested");
@@ -46,12 +46,10 @@ class Login extends Form {
           <div className="col-sm-7 contactup">
             <p className="contactPara1">Get in touch</p>
             <p className="contactPara2">Contact us for all services </p>
-
-            
           </div>
 
           <div className="col-sm-7 contact1">
-            <form ref = {this.form} onSubmit={this.handleSubmit}>
+            <form ref={this.form} onSubmit={this.handleSubmit}>
               {this.renderInput("fullname", "Fullname")}
               {this.renderInput("email", "Email")}
               {/* {this.renderSelect("message", "--Select your Interest--")} */}
