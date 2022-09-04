@@ -16,33 +16,56 @@
 }
 .text{
     text-align: center;
-    animation: animate ease 8s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
     margin-bottom: 7px;
+    position: relative;
 }
 
 @keyframes moveLeft {
     0%{
         opacity: 0;
-        transform: translateX(-100);
+        transform: translate(-100px);
     }
     80%{
-        transform: translate(10);
+        transform: translate(10px);
     }
     100%{
         opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveRight {
+    0%{
+        opacity: 0;
+        transform: translate(100px);
+    }
+    80%{
+        transform: translate(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveButom {
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
     }
 }
 
 .para1{
-    animation: moveLeft 5s ease-out;
+    animation: moveLeft 3s ease-out;
     font-size: 30px;
     font-family: 'Trebuchet MS', '
     Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
 }
 
 .para2{
+    animation: moveRight 3s ease-out;
     font-family: 'sundine',Helvetica,Arial,Lucida,sans-serif;
     font-weight: bold;
     font-size: 100px;
@@ -51,21 +74,50 @@
 }
 
 .buttonLand{
-    margin-top: 30px;
-    color:white;
-    border-color: white;
-    border-style: solid;
-    background-color: transparent;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 30px;
-    padding: 10px;
-    letter-spacing: 25px;
-    border-radius: 50px;
+    background-color: white;
+    color: #777;
+    animation: moveButom 3s ease-out;
+    animation-fill-mode: backwards;
 }
 
-button:hover{
-    background-color: white;
-    color: black;
-    border-radius: 1px solid black;  
+.buttonLand:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(228, 206, 206, 0.2);
 }
+.buttonLand:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(228, 206, 206, 0.2);
+}
+
+.buttonLand:link,
+.buttonLand:visited{
+    display: inline-block;
+    transform: uppercase;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 100px;
+    transition: all .2;
+    position: relative;
+}
+
+.buttonLand::after{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    background-color: white;
+}
+
+
+.buttonLand:hover::after{
+   transform: scale(1.5) scale(1.5);
+   opacity: 0;
+}
+
+

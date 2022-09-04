@@ -39,7 +39,8 @@ class book extends Form {
       )
       .then(
         (result) => {
-          toast.success("Email sent");
+          toast.success(`Email sent we will get back to you shortly` );
+         this.props.history.push('/')
         },
         (error) => {
           console.log(error.text);

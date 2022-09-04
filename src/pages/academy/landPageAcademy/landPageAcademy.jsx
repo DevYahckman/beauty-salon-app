@@ -1,10 +1,20 @@
 import React from 'react';
-import './LandPageAcademy.css'
+import './landPageAcademy.css'
+
+
 function LandPageAcademy(props) {
     return (
-        <div className="AcademyLand">
-            
-        </div>
+              <div className="academy">
+
+              <div className="academy__header">
+                <h1 className='header__text'> 
+                    <span className="text--main" >Afosh Glams</span>
+                    <span className="text--sub">Academy</span>
+                </h1>
+                
+            </div>
+              </div>
+     
     );
 }
 

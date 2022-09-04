@@ -28,7 +28,8 @@ class Login extends Form {
       )
       .then(
         (result) => {
-          toast.success("Email sent");
+          toast.success("Thanks for contacting us");
+          this.props.history.push('/')
         },
         (error) => {
           console.log(error.text);

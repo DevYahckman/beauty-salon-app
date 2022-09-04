@@ -9,7 +9,7 @@ function LandingPage(props) {
         <br />
         <p className="para2">Feel beatuiful</p>
         <br />
-        <button className="buttonLand">Book Now !!!</button>
+        <a href="#" className= 'buttonLand'>Book Now !!!</a>
       </div>
     </div>
   );
