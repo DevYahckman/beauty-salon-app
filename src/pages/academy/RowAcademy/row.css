@@ -1,0 +1,40 @@
+.academic__rowOne{
+    background-color: rgb(247, 197, 205);
+    height: 95vh;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    font-size: 20px;
+}
+.academy__colA{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.colA__para1{
+    font-size: 45px;
+    font-family: monotype cursiva;
+   
+}
+
+colA__para2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.colA__list{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.academy__rowB{
+    background-image: url('/public/images/traOne.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 80%;
+    width: 80%;
+    position:absolute;
+    top: 15%;
+    left: 10%;
+    border-radius: 20px;
+}
