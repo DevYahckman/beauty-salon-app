@@ -1,0 +1,17 @@
+.academyTwo{
+    text-align: center;
+    line-height: 40px;
+    padding: 30px;
+
+}
+
+.academyTwo__para1{
+    display: block;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: monotype-cursiva;
+}
+.academyTwo__para2{
+    display: block;
+    font-size: 20px;
+}

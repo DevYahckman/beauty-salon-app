@@ -9,16 +9,16 @@ import Academy from "./pages/academy/academy";
 import Home from "./pages/home/home";
 import Contact from "./pages/contact/contact";
 import Book from './pages/book/book';
-import SideBars from "./components/sideBars/sideBar";
-// import SideBars from './components/sideBars/sideBar';
+// import SideBars from "./components/sideBars/sideBar";
+
 class App extends Component {
   state = {};
   render() {
     return (
-      <div  style={{display:'flex' }}>
+      <div >
         <ToastContainer/>
         <NavBar />
-        <SideBars/>
+        {/* <SideBars/> */}
 
         <Switch>
           <Route path="/book" component={ Book } />

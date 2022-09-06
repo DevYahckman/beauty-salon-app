@@ -40,14 +40,7 @@ class NavBar extends Component {
               </span>{" "}
               About
             </NavLink>
-            <NavLink className="nav-item nav-link" to="/treatment">
-              {" "}
-              <span>
-                {" "}
-                <BsPaletteFill />{" "}
-              </span>{" "}
-              Treatment
-            </NavLink>
+
             <NavLink className="nav-item nav-link" to="/book">
               {" "}
               <span>
