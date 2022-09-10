@@ -1,7 +1,6 @@
 .contact{
-    /* background-image: url(../../assets/img/traTwo.jpg); */
+    background-image: linear-gradient( to right bottom, rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.801)), url(../../assets/img/traTwo.jpg);
     /* background-image: url('/public/images/tra3.jpg'); */
-    background-color: blue;
     height: 110vh;
     width: 100%;
     background-size: cover;
@@ -10,6 +9,7 @@
     align-items: center;
     /* margin-left: 40%; */
     padding-left: 20%;
+    
 }
 
 
